@@ -4,6 +4,7 @@
   padding: 0;
   font: inherit;
   line-height: 1.5;
+  text-decoration: none;
 
   font-family: Roboto;
 }
@@ -62,7 +63,6 @@ input, button, textarea, select {
     color: var(--light-color);
     font-weight: bold;
     font-size: 1rem;
-    text-decoration: none;
 }
 .sidebar > div {
     display: grid;
