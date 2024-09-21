@@ -118,6 +118,7 @@ input, button, textarea, select {
     border: none;
     border-radius: 1rem;
     background-color: var(--gray-color);
+    font-weight: 300;
 }
 .topHeader input:focus {
     outline: none;
@@ -175,6 +176,7 @@ input, button, textarea, select {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
     grid-template: 60% 40% / 70% 30%;
+    gap: 20px;
 
     background-color: var(--gray-color);
     padding: 40px 20px;
@@ -186,9 +188,13 @@ input, button, textarea, select {
     font-weight: medium;
     margin-bottom: 10px;
 }
+.cardsContainer {
+    display: grid;
+    grid-template: repeat(3, 150px) / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
 .projects .card {
     height: 150px;
-    width: 300px;
     display: grid;
     grid-template: 100% / 10px 1fr;
     border-radius: 10px;
