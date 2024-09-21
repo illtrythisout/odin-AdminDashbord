@@ -119,6 +119,7 @@ input, button, textarea, select {
     border-radius: 1rem;
     background-color: var(--gray-color);
     font-weight: 300;
+    transition: box-shadow 0.3s;
 }
 .topHeader input:focus {
     outline: none;
@@ -167,6 +168,7 @@ input, button, textarea, select {
     border-radius: 1.25rem;
     color: var(--light-color);
     font-size: 1rem;
+    transition: box-shadow 0.3s;
 }
 .bottomHeader button:hover {
     box-shadow: 0 0 5px 2px rgb(212, 210, 209);
@@ -200,6 +202,10 @@ input, button, textarea, select {
     border-radius: 10px;
     box-shadow: 0 0 5px 2px rgb(212, 210, 209);
     background-color: var(--light-color);
+    transition: box-shadow 0.3s;
+}
+.card:hover {
+    box-shadow: 5px 5px 10px 5px rgb(212, 210, 209);
 }
 .card .sidebar {
     border-radius: 10px 0 0 10px;
