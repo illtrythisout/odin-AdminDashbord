@@ -177,14 +177,14 @@ input, button, textarea, select {
 .main {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template: 60% 40% / 70% 30%;
+    grid-template: 100% / 70% 30%;
     gap: 20px;
 
     background-color: var(--gray-color);
     padding: 40px 20px;
 }
 .main .projects {
-    grid-area: 1 / 1 / 3 / 2;
+    grid-column: 1 / 2;
 }
 .main h2 {
     font-weight: medium;
@@ -196,7 +196,6 @@ input, button, textarea, select {
     gap: 10px;
 }
 .projects .card {
-    height: 150px;
     display: grid;
     grid-template: 100% / 10px 1fr;
     border-radius: 10px;
@@ -234,4 +233,47 @@ input, button, textarea, select {
 .card img {
     height: 1.5rem;
     width: 1.5rem;
+}
+.sidePanel {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-right: 20px;
+}
+.announcementsCard, .trendingCard {
+    background-color: var(--light-color);
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 1fr;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgb(212, 210, 209);
+    transition: box-shadow 0.3s;
+    gap: 1rem;
+}
+.announcementsCard:hover, .trendingCard:hover {
+    box-shadow: 5px 5px 10px 5px rgb(212, 210, 209);
+}
+.announcementsCard p {
+    font-weight: 300;
+}
+.announcementsCard .line {
+    height: 1px;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--gray-color);
+}
+.trendingCard .textBox {
+    display: grid;
+    grid-template: repeat(2, 1fr) / calc(1.5rem + 10px) 1fr;
+}
+.trendingCard a {
+    height: 1.5rem;
+    width: 1.5rem;
+    grid-area: 1 / 1 / 3 / 2;
+    align-self: center;
+}
+.trendingCard p {
+    font-weight: 300;
 }
