@@ -52,6 +52,9 @@ input, button, textarea, select {
     font-weight: medium;
 }
 
+a {
+    color: black;
+}
 .content {
     height: 100dvh;
 
