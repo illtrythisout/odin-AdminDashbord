@@ -24,11 +24,14 @@ input, button, textarea, select {
     --secondary-color: #0d9488;
     --light-color: #fff7ed;
     --gray-color: #e7e5e4;
+
+    --header-gap: 20px;
 }
 
 @font-face {
     font-family: Roboto;
     src: url(./fonts/Roboto-Regular.ttf);
+    font-weight: 400;
 }
 
 @font-face {
@@ -40,7 +43,13 @@ input, button, textarea, select {
 @font-face {
     font-family: Roboto;
     src: url(./fonts/Roboto-Light.ttf);
-    font-weight: light;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Medium.ttf);
+    font-weight: medium;
 }
 
 .content {
@@ -64,6 +73,9 @@ input, button, textarea, select {
     font-weight: bold;
     font-size: 1rem;
 }
+.sidebar a:visited {
+    color: var(--light-color);
+}
 .sidebar > div {
     display: grid;
     gap: 0.75rem;
@@ -74,12 +86,140 @@ input, button, textarea, select {
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: var(--header-gap);
 
     background-color: var(--light-color);
+}
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(2 * var(--header-gap));
+}
+.header a:visited {
+    color: black;
+}
+.topHeader img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.topHeader .searchBar {
+    display: flex;
+    gap: var(--header-gap);
+    flex: 1;
+    align-items: center;
+}
+.topHeader input {
+    flex: 1;
+    height: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--gray-color);
+}
+.topHeader input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgb(212, 210, 209);
+}
+.topHeader .profileBar {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: var(--header-gap);
+}
+.bottomHeader {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.bottomHeader .profileDisplay {
+    display: flex;
+    gap: var(--header-gap);
+}
+.bottomHeader .profileDisplay div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottomHeader .profileDisplay p {
+    font-size: 1rem;
+}
+.bottomHeader .profileDisplay div a {
+    font-size: 1.5rem;
+}
+.bottomHeader img {
+    height: 4rem;
+    width: 4rem;
+}
+.bottomHeader .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--header-gap);
+}
+.bottomHeader button {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 1.25rem;
+    color: var(--light-color);
+    font-size: 1rem;
+}
+.bottomHeader button:hover {
+    box-shadow: 0 0 5px 2px rgb(212, 210, 209);
 }
 
 .main {
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template: 60% 40% / 70% 30%;
 
     background-color: var(--gray-color);
+    padding: 40px 20px;
+}
+.main .projects {
+    grid-area: 1 / 1 / 3 / 2;
+}
+.main h2 {
+    font-weight: medium;
+    margin-bottom: 10px;
+}
+.projects .card {
+    height: 150px;
+    width: 300px;
+    display: grid;
+    grid-template: 100% / 10px 1fr;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgb(212, 210, 209);
+    background-color: var(--light-color);
+}
+.card .sidebar {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    padding: 0;
+    grid-column: 1 / 2;
+}
+.cardContent {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template: 25% 50% 25%;
+    padding: 10px;
+}
+.card h3 {
+    align-self: end;
+}
+.card p {
+    font-weight: 300;
+}
+.card .icons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.card img {
+    height: 1.5rem;
+    width: 1.5rem;
 }
